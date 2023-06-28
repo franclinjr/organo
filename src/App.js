@@ -4,7 +4,9 @@ import { useState } from 'react'
 import Time from './componentes/Time';
 import Rodape from './componentes/Rodape';
 
+
 function App() {
+  
 
   const times = [
     {
@@ -47,11 +49,11 @@ function App() {
   const [colaboradores, setColaboradores] = useState([])
 
   const novoColaborador = (colaborador) => { //função que cria o card do colaborador
-    console.log(colaborador)
     setColaboradores([...colaboradores, colaborador])
   }
 
   return (
+
     <div className="App">
       <Banner />
       <Formulario times={times.map(time => time.nome)} cadastroColaborador={colaborador =>  novoColaborador(colaborador)} />
